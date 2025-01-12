@@ -1,6 +1,6 @@
 # Installation
 
-- Run ``nvm install 21.6.1`
+- Run `nvm install 21.6.1`
 - then Run `nvm use` to use node version specified in .nvmrc
 - install the dependencies: `pnpm i`
 - RUN `cp .env.test .env` to copy environment variables to `.env`
