@@ -13,7 +13,3 @@ RUN pnpm run build
 COPY . .
 EXPOSE 9000
 CMD [ "pnpm", "start:prod" ]
-
-
-
-
