@@ -7,7 +7,7 @@ COPY . /app
 WORKDIR /app
 
 RUN pnpm run clean
-RUN pnpm pnpm install --frozen-lockfile 
+RUN pnpm install --frozen-lockfile 
 RUN pnpm run build
 
 COPY . .
