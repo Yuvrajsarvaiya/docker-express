@@ -9,6 +9,6 @@
 
 # Docker Setup
 
-- Run the `docker build -t drizzle-docker` to generate the docker image
+- Run the `docker build -t drizzle-docker .` to generate the docker image
 - Run `docker run -p 9000:9000 --name drizzle-container [image_id]` to run the container from build docker image
 - test the server endpoint with `CURL -X GET http://localhost:9000/health`
