@@ -2,12 +2,12 @@
   "name": "nodejs-docker",
   "version": "1.0.0",
   "description": "Nodejs Docker deployement",
-  "main": "dist/app.js",
+  "main": "dist/src/app.js",
   "scripts": {
     "clean": "pnpm dlx rimraf node_modules dist",
     "build": "tsc",
     "dev": "nodemon src/app.ts",
-    "start:prod": "node dist/app.js"
+    "start:prod": "node dist/src/app.js"
   },
   "keywords": [],
   "author": "Yuvraj Sarvaiya",

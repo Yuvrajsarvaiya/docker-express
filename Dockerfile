@@ -3,13 +3,17 @@ ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 RUN corepack enable
 
-COPY . /app
-WORKDIR /app
+WORKDIR /usr/src/app
+
+COPY package.json pnpm-lock.yaml drizzle.config.ts ./
 
 RUN pnpm run clean
 RUN pnpm install --frozen-lockfile 
-RUN pnpm run build
 
 COPY . .
+
+RUN pnpm run build
+
 EXPOSE 9000
+
 CMD [ "pnpm", "start:prod" ]
