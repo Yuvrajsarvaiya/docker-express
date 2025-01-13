@@ -4,7 +4,7 @@
     "experimentalDecorators": true,                   /* Enable experimental support for legacy experimental decorators. */
     "emitDecoratorMetadata": true,                    /* Emit design-type metadata for decorated declarations in source files. */
     "module": "commonjs",                                /* Specify what module code is generated. */
-    "rootDir": "./src",                                  /* Specify the root folder within your source files. */
+    "rootDir": "./",                                  /* Specify the root folder within your source files. */
     "outDir": "./dist",                                   /* Specify an output folder for all emitted files. */
     "isolatedModules": true,                          /* Ensure that each file can be safely transpiled without relying on other imports. */
     "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
@@ -21,4 +21,9 @@
     "noImplicitOverride": true,                       /* Ensure overriding members in derived classes are marked with an override modifier. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
+  "include": [
+    "src/**/*",
+    "drizzle.config.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
 }
