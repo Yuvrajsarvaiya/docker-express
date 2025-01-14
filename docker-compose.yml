@@ -28,7 +28,7 @@ services:
     depends_on:
       - postgres
     command: >
-      sh -c "pnpm exec drizzle-kit up &&
+      sh -c "pnpm exec drizzle-kit migrate &&
              pnpm run start:prod"
 
 volumes:

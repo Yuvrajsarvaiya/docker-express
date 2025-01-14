@@ -5,12 +5,13 @@ RUN corepack enable
 
 WORKDIR /usr/src/app
 
-COPY package.json pnpm-lock.yaml drizzle.config.ts ./
+COPY package.json pnpm-lock.yaml drizzle drizzle.config.ts ./
 
-RUN pnpm run clean
 RUN pnpm install --frozen-lockfile 
 
 COPY . .
+
+RUN pnpm exec drizzle-kit generate
 
 RUN pnpm run build
 
